@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/historyLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/display"
+        android:gravity="right"
+        android:textSize="26sp">
+
+    </TextView>
+    <EditText
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/grid_tools"
+        android:gravity="right"
+        android:text="0"
+        android:maxLength="30"
+        android:textSize="45sp"
+        android:inputType="number"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+    </EditText>
+    <GridLayout
+        android:id="@+id/grid_tools"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:rowCount="5"
+        android:columnCount="4">
+        <Button android:id="@+id/C"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_columnSpan="3"
+            android:text="C"
+            style="@style/btnStyle"
+            android:onClick="clearClick">
+
+        </Button>
+
+        <Button android:id="@+id/btn_7"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:text="7"
+            style="@style/btnStyle"
+            android:onClick="addNumberAction">
+
+        </Button>
+        <Button android:id="@+id/btn_8"
+            android:text="8"
+            android:onClick="addNumberAction"
+            style="@style/btnStyle">
+
+        </Button>
+        <Button android:id="@+id/btn_9"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:text="9"
+            style="@style/btnStyle"
+            android:onClick="addNumberAction">
+
+        </Button>
+        <Button android:id="@+id/btn_4"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:text="4"
+            style="@style/btnStyle"
+            android:onClick="addNumberAction">
+
+        </Button>
+        <Button android:id="@+id/btn_5"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:text="5"
+            style="@style/btnStyle"
+            android:onClick="addNumberAction">
+
+        </Button>
+        <Button android:id="@+id/btn_6"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:text="6"
+            style="@style/btnStyle"
+            android:onClick="addNumberAction">
+
+        </Button>
+        <Button android:id="@+id/btn_1"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:text="1"
+            style="@style/btnStyle"
+            android:onClick="addNumberAction">
+
+        </Button>
+        <Button android:id="@+id/btn_2"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:text="2"
+            style="@style/btnStyle"
+            android:onClick="addNumberAction">
+
+        </Button>
+        <Button android:id="@+id/btn_3"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:text="3"
+            style="@style/btnStyle"
+            android:onClick="addNumberAction">
+
+        </Button>
+        <Button android:id="@+id/btn_0"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="1"
+            android:text="0"
+            style="@style/btnStyle"
+            android:onClick="addNumberAction">
+
+        </Button>
+        <Button android:id="@+id/btn_dot"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:text=","
+            style="@style/btnStyle"
+            android:onClick="addDot">
+
+        </Button>
+        <Button android:id="@+id/btn_div"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:text="/"
+            style="@style/btnStyle"
+            android:onClick="plusAction">
+
+        </Button>
+        <Button android:id="@+id/btn_multiply"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:text="*"
+            style="@style/btnStyle"
+            android:onClick="plusAction">
+
+        </Button>
+        <Button android:id="@+id/btn_minus"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:text="-"
+            style="@style/btnStyle"
+            android:onClick="plusAction">
+
+        </Button>
+        <Button android:id="@+id/btn_plus"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:text="+"
+            style="@style/btnStyle"
+            android:onClick="plusAction">
+
+        </Button>
+        <Button android:id="@+id/btn_equally"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:text="="
+            style="@style/btnStyle"
+            android:onClick="equallyAction">
+
+        </Button>
+    </GridLayout>
+
+</RelativeLayout>
